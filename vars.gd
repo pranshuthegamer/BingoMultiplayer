@@ -38,4 +38,5 @@ func StartServer(clien):
 	set_process(true)
 	set_physics_process(true)
 	server.change_scene("res://Server.tscn")
-
+	server.get_root().set_update_mode(Viewport.UPDATE_DISABLED)
+	get_tree().get_root().set_update_mode(Viewport.UPDATE_WHEN_VISIBLE)
