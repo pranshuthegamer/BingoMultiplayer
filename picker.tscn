@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+func _on_Button_pressed():
+	Vars.hosting = true
+	Vars.StartServer(get_tree())
+
+func _on_Button2_pressed():
+	Vars.StartClient(get_tree())
+"
+
+[node name="picker" type="Node2D"]
+script = SubResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_right = 128.0
+margin_bottom = 128.0
+text = "host"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 152.0
+margin_right = 280.0
+margin_bottom = 128.0
+text = "join"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]

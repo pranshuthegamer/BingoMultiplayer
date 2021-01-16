@@ -1,0 +1,269 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://buttons.gd" type="Script" id=1]
+[ext_resource path="res://Player.gd" type="Script" id=2]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="Numbers" type="Node" parent="."]
+
+[node name="B1" type="Button" parent="Numbers"]
+margin_left = 8.0
+margin_top = 36.0
+margin_right = 40.0
+margin_bottom = 68.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B2" type="Button" parent="Numbers"]
+margin_left = 48.0
+margin_top = 36.0
+margin_right = 80.0
+margin_bottom = 68.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B3" type="Button" parent="Numbers"]
+margin_left = 88.0
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 68.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B4" type="Button" parent="Numbers"]
+margin_left = 128.0
+margin_top = 36.0
+margin_right = 160.0
+margin_bottom = 68.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B5" type="Button" parent="Numbers"]
+margin_left = 168.0
+margin_top = 36.0
+margin_right = 200.0
+margin_bottom = 68.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B6" type="Button" parent="Numbers"]
+margin_left = 8.0
+margin_top = 76.0
+margin_right = 40.0
+margin_bottom = 108.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B7" type="Button" parent="Numbers"]
+margin_left = 48.0
+margin_top = 76.0
+margin_right = 80.0
+margin_bottom = 108.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B8" type="Button" parent="Numbers"]
+margin_left = 88.0
+margin_top = 76.0
+margin_right = 120.0
+margin_bottom = 108.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B9" type="Button" parent="Numbers"]
+margin_left = 128.0
+margin_top = 76.0
+margin_right = 160.0
+margin_bottom = 108.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B10" type="Button" parent="Numbers"]
+margin_left = 168.0
+margin_top = 76.0
+margin_right = 200.0
+margin_bottom = 108.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B11" type="Button" parent="Numbers"]
+margin_left = 8.0
+margin_top = 116.0
+margin_right = 40.0
+margin_bottom = 148.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B12" type="Button" parent="Numbers"]
+margin_left = 48.0
+margin_top = 116.0
+margin_right = 80.0
+margin_bottom = 148.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B13" type="Button" parent="Numbers"]
+margin_left = 88.0
+margin_top = 116.0
+margin_right = 120.0
+margin_bottom = 148.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B14" type="Button" parent="Numbers"]
+margin_left = 128.0
+margin_top = 116.0
+margin_right = 160.0
+margin_bottom = 148.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B15" type="Button" parent="Numbers"]
+margin_left = 168.0
+margin_top = 116.0
+margin_right = 200.0
+margin_bottom = 148.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B16" type="Button" parent="Numbers"]
+margin_left = 8.0
+margin_top = 156.0
+margin_right = 40.0
+margin_bottom = 188.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B17" type="Button" parent="Numbers"]
+margin_left = 48.0
+margin_top = 156.0
+margin_right = 80.0
+margin_bottom = 188.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B18" type="Button" parent="Numbers"]
+margin_left = 88.0
+margin_top = 156.0
+margin_right = 120.0
+margin_bottom = 188.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B19" type="Button" parent="Numbers"]
+margin_left = 128.0
+margin_top = 156.0
+margin_right = 160.0
+margin_bottom = 188.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B20" type="Button" parent="Numbers"]
+margin_left = 168.0
+margin_top = 156.0
+margin_right = 200.0
+margin_bottom = 188.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B21" type="Button" parent="Numbers"]
+margin_left = 8.0
+margin_top = 196.0
+margin_right = 40.0
+margin_bottom = 228.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B22" type="Button" parent="Numbers"]
+margin_left = 48.0
+margin_top = 196.0
+margin_right = 80.0
+margin_bottom = 228.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B23" type="Button" parent="Numbers"]
+margin_left = 88.0
+margin_top = 196.0
+margin_right = 120.0
+margin_bottom = 228.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B24" type="Button" parent="Numbers"]
+margin_left = 128.0
+margin_top = 196.0
+margin_right = 160.0
+margin_bottom = 228.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B25" type="Button" parent="Numbers"]
+margin_left = 168.0
+margin_top = 196.0
+margin_right = 200.0
+margin_bottom = 228.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 8.0
+margin_right = 200.0
+margin_bottom = 32.0
+text = "Player"
+__meta__ = {
+"_edit_use_anchors_": false
+}
