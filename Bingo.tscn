@@ -720,7 +720,6 @@ text = "switch to server"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="tree_entered" from="." to="." method="_on_Game_tree_entered"]
 [connection signal="pressed" from="Numbers/B1" to="Numbers/B1" method="_on_Button_pressed"]
 [connection signal="pressed" from="Numbers/B2" to="Numbers/B2" method="_on_Button_pressed"]
 [connection signal="pressed" from="Numbers/B3" to="Numbers/B3" method="_on_Button_pressed"]

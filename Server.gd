@@ -83,8 +83,6 @@ func PeerConnected(playerid):
 	temppos = [slots[slots.size() - 1]]
 	print(temppos)
 	get_node(str(playerid)).offset = Vector2(temppos[0])
-	if Vars.hosting == true:
-		get_node(str(playerid)).scale = Vector2(0,0)
 	slots.remove(slots.size() - 1) 
 	players = players + [playerid]
 

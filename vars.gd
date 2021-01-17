@@ -2,6 +2,7 @@ extends Node
 
 var client
 var server
+var isshowing
 
 export var hosting = false
 
@@ -10,21 +11,19 @@ func _ready():
 	set_physics_process(false)
 
 func SwitchToServer():
+	server.get_root().get_viewport().size = client.get_root().get_viewport().size
+	isshowing = true
 	server.get_root().set_update_mode(Viewport.UPDATE_ALWAYS)
-	get_tree().get_root().set_update_mode(Viewport.UPDATE_ALWAYS)
-	yield(get_tree().create_timer(1), "timeout")
-	server.get_root().set_update_mode(Viewport.UPDATE_DISABLED)
-	get_tree().get_root().set_update_mode(Viewport.UPDATE_WHEN_VISIBLE)
+	client.get_root().set_update_mode(Viewport.UPDATE_ALWAYS)
 
 func SwitchToClient():
+	isshowing = false
 	server.get_root().set_update_mode(Viewport.UPDATE_DISABLED)
-	get_tree().get_root().set_update_mode(Viewport.UPDATE_WHEN_VISIBLE)
+	client.get_root().set_update_mode(Viewport.UPDATE_WHEN_VISIBLE)
 
 func _process(delta):
 	server.idle(delta)
 
-func _physics_process(delta):
-	server.iteration(delta)
 
 func StartClient(clien):
 	client = clien
@@ -39,4 +38,4 @@ func StartServer(clien):
 	set_physics_process(true)
 	server.change_scene("res://Server.tscn")
 	server.get_root().set_update_mode(Viewport.UPDATE_DISABLED)
-	get_tree().get_root().set_update_mode(Viewport.UPDATE_WHEN_VISIBLE)
+	client.get_root().set_update_mode(Viewport.UPDATE_WHEN_VISIBLE)

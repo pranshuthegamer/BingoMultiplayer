@@ -24,6 +24,10 @@ func _ready():
 	_server.connect("connection_succeeded",self,"Connected")
 	_server.connect("connection_failed",self,"Failed")
 
+func _input(event):
+	if Vars.isshowing == true and Vars.hosting == true:
+		Vars.server.input_event(event)
+		get_tree().set_input_as_handled()
 
 
 func _process(delta):
