@@ -35,6 +35,10 @@ var wth = 0
 var TEMP = ""
 var temppos = Vector2()
 
+func _input(event):
+	if event is InputEventMouseMotion:
+		get_node("Sprite").position = event.position
+	
 
 func _ready():
 	auto = get_node("Button2").pressed
