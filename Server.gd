@@ -46,6 +46,7 @@ func _ready():
 		if str(temp[0]) == "192":
 			ip = PoolStringArray(temp).join(".")
 			print(ip)
+	add_child(preload("res://Sprite.tscn").instance())
 
 
 
