@@ -25,7 +25,7 @@ func _process(delta):
 
 func _size_changed():
 	server.get_root().get_viewport().size = client.get_root().get_viewport().size
-	server.set_screen_stretch(SceneTree.STRETCH_MODE_2D,SceneTree.STRETCH_ASPECT_KEEP,Vector2(640,360),1)
+	server.set_screen_stretch(SceneTree.STRETCH_MODE_2D,SceneTree.STRETCH_ASPECT_EXPAND,Vector2(640,360),1)
 
 func StartClient(clien):
 	client = clien
@@ -40,6 +40,6 @@ func StartServer(clien):
 	set_process(true)
 	set_physics_process(true)
 	server.change_scene("res://Server.tscn")
-	server.set_screen_stretch(SceneTree.STRETCH_MODE_2D,SceneTree.STRETCH_ASPECT_KEEP,Vector2(640,360),1)
+	server.set_screen_stretch(SceneTree.STRETCH_MODE_2D,SceneTree.STRETCH_ASPECT_EXPAND,Vector2(640,360),1)
 	server.get_root().set_update_mode(Viewport.UPDATE_DISABLED)
 	client.get_root().set_update_mode(Viewport.UPDATE_WHEN_VISIBLE)

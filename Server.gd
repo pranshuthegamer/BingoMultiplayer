@@ -23,7 +23,7 @@ const possible = [["B1","B2","B3","B4","B5"],
 ["B1","B7","B13","B19","B25"],
 ["B5","B9","B13","B17","B21"]
 ]
-var slots = [Vector2(416,240),Vector2(208,240),Vector2(0,240),Vector2(832,0),Vector2(624,0),Vector2(416,0),Vector2(208,0),Vector2(0,0)]
+var slots = [Vector2(456,152),Vector2(304,152),Vector2(152,152),Vector2(0,152),Vector2(456,0),Vector2(304,0),Vector2(152,0),Vector2(0,0)]
 var temparray = []
 var players = []
 
@@ -102,7 +102,7 @@ remote func PlayerReady():
 	for i in get_children():
 		if i is CanvasLayer and i.ready == true:
 			temp = temp + 1
-	if temp == get_child_count() - 3 :
+	if temp == get_child_count() - 4 :
 		playernow = players.duplicate(true)
 		rpc("Start")
 		Start()

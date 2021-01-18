@@ -9,5 +9,7 @@ script/source = "extends Sprite
 "
 
 [node name="Sprite" type="Sprite"]
+position = Vector2( -14, -14 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 script = SubResource( 1 )

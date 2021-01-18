@@ -26,8 +26,11 @@ func _ready():
 
 func _input(event):
 	if Vars.isshowing == true and Vars.hosting == true:
-		Vars.server.input_event(event)
-		get_tree().set_input_as_handled()
+		if event is InputEventMouse:
+			event.position.x = (event.position.x / 640) * get_tree().get_root().size.x
+			event.position.y = (event.position.y / 360) * get_tree().get_root().size.y
+			Vars.server.input_event(event)
+			get_tree().set_input_as_handled()
 
 
 func _process(delta):
