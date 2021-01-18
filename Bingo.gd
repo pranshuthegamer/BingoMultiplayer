@@ -98,6 +98,7 @@ func _on_00_pressed():
 
 remote func Start():
 	wth = 1
+	$Button.hide()
 	for i in get_node("Numbers").get_children():
 		get_node("Numbers/" + str(i.name) + "/TextureRect").texture = redicon
 
