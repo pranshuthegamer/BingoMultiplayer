@@ -11,6 +11,7 @@ func _on_Button2_pressed():
 "
 
 [node name="picker" type="Node2D"]
+position = Vector2( 176, 128 )
 script = SubResource( 1 )
 
 [node name="Button" type="Button" parent="."]
@@ -22,8 +23,8 @@ __meta__ = {
 }
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 152.0
-margin_right = 280.0
+margin_left = 160.0
+margin_right = 288.0
 margin_bottom = 128.0
 text = "join"
 __meta__ = {
