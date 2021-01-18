@@ -144,11 +144,12 @@ remote func reset():
 		i.selected = false
 		i.set("custom_fonts/font", fontx)
 		get_node("Numbers/" + str(i.name) + "/TextureRect").texture = yellowicon
-		myturn = false
-		$Button.text = "Ready"
-		$Leader.text = ""
-		$Turn.text = ""
-		number = 0
+	myturn = false
+	$Button.text = "Ready"
+	$Leader.text = ""
+	$Turn.text = ""
+	number = 0
+	$Button.show()
 
 
 func _on_Send_Button_pressed():
