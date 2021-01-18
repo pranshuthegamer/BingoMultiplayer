@@ -17,6 +17,7 @@ _global_script_class_icons={
 
 config/name="Bingo MULTI"
 run/main_scene="res://picker.tscn"
+boot_splash/image="res://Banner.png"
 config/icon="res://icon.png"
 
 [autoload]
