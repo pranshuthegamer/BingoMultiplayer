@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Bingo.gd" type="Script" id=1]
 [ext_resource path="res://numbers.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/fontX.tres" type="DynamicFont" id=4]
 [ext_resource path="res://assets/font.tres" type="DynamicFont" id=5]
 [ext_resource path="res://assets/6jwxhr85.bmp" type="Texture" id=6]
+[ext_resource path="res://assets/Connect.png" type="Texture" id=7]
 
 [node name="Game" type="Node"]
 script = ExtResource( 1 )
@@ -727,6 +728,12 @@ position = Vector2( 184, 176 )
 scale = Vector2( 0.640625, 0.622568 )
 z_index = -1
 texture = ExtResource( 6 )
+
+[node name="ConnectFirst" type="Sprite" parent="."]
+position = Vector2( 176, 177 )
+scale = Vector2( 0.6875, 0.683594 )
+texture = ExtResource( 7 )
+
 [connection signal="pressed" from="Numbers/B1" to="Numbers/B1" method="_on_Button_pressed"]
 [connection signal="pressed" from="Numbers/B2" to="Numbers/B2" method="_on_Button_pressed"]
 [connection signal="pressed" from="Numbers/B3" to="Numbers/B3" method="_on_Button_pressed"]

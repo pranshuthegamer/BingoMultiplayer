@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bingo MULTI.png-3f2179ae6d96e68053e413cf60db3ce0.stex"
+path="res://.import/Connect.png-ec85211702f8e4ec31ecc48c9c30b37e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bingo MULTI.png"
-dest_files=[ "res://.import/Bingo MULTI.png-3f2179ae6d96e68053e413cf60db3ce0.stex" ]
+source_file="res://assets/Connect.png"
+dest_files=[ "res://.import/Connect.png-ec85211702f8e4ec31ecc48c9c30b37e.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

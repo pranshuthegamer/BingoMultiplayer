@@ -66,9 +66,9 @@ func _process(delta):
 				currentip = parts.join('.')
 				parts[3] = '255'
 				brodcaster.set_dest_address(parts.join('.'), 8081)
-				var pac = str(ip).to_ascii()
+				var pac = str("bingojoin." + ip).to_ascii()
 				var error = brodcaster.put_packet(pac)
-				print('sending', parts)
+				print('sending to ', parts)
 				if error == 1:
 					print("Error while sending to ", ip, ":", 8081)
 

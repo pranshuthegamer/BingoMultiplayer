@@ -7,6 +7,7 @@ var ip = ""
 var port = 63389
 var connected = false
 
+var winners = []
 var greenicon = preload("res://assets/green.png")
 var redicon = preload("res://assets/red.png")
 var yellowicon = preload("res://assets/yellow.png")
@@ -16,6 +17,7 @@ var myturn = false
 func _ready():
 	if Vars.hosting == false:
 		$Button2.hide()
+	
 	udp_network = PacketPeerUDP.new()
 	if udp_network.listen(8081) != OK:
 		print("Error listening on port: ", 8081)
@@ -37,9 +39,14 @@ func _process(delta):
 	if udp_network.get_available_packet_count() > 0:
 		var array_bytes = udp_network.get_packet()
 		var packet_string = array_bytes.get_string_from_ascii()
-		
-		ip = packet_string
-		print(ip)
+		var temp = packet_string.split(".")
+		if temp.size() == 5 and temp[0] == "bingojoin":
+			temp.remove(0)
+			ip = temp.join(".")
+			print("host found at: ",ip)
+
+func _on_hosttimer():
+	ServerConnect()
 
 func ServerConnect():
 	if Vars.hosting == true:
@@ -61,6 +68,8 @@ func Connected():
 	connected = true
 	$Button.text = "Ready"
 	$TextEdit.hide()
+	$ConnectFirst.hide()
+	reset()
 
 func Failed():
 	print("connection failed")
@@ -119,10 +128,15 @@ remotesync func turnplayed(value):
 	get_node("Turn").text = ""
 
 remote func winner(winner):
-	if winner == str(_server.get_unique_id()):
-		get_node("Leader").add_text("YOU WON" + "\n")
+	if winner in winners:
+		pass
 	else:
-		get_node("Leader").add_text(str(winner) + "Won \n")
+		if winner == str(_server.get_unique_id()):
+			get_node("Leader").add_text("YOU WON" + "\n")
+			winners.append(winner)
+		else:
+			get_node("Leader").add_text(str(winner) + "Won \n")
+			winners.append(winner)
 
 func _ressed(NAME):
 	if wth == 0 and get_node(("Numbers/") + (NAME)).selected == false:
@@ -150,6 +164,7 @@ remote func reset():
 	$Turn.text = ""
 	number = 0
 	$Button.show()
+	winners = []
 
 
 func _on_Send_Button_pressed():

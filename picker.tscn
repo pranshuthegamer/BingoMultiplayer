@@ -30,5 +30,6 @@ text = "join"
 __meta__ = {
 "_edit_use_anchors_": true
 }
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
