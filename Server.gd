@@ -57,7 +57,7 @@ func _ready():
 func _process(delta):
 	brodcast -= delta
 	if brodcast <= 0 and doit == true:
-		brodcast = 5
+		brodcast = 0.5
 		print("sending")
 		for adress in IP.get_local_addresses():
 			var address = adress.split("[")
